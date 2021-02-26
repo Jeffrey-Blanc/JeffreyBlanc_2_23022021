@@ -1,0 +1,159 @@
+/****** CSS GLOBAL ******/
+*{
+    margin: 0;
+    padding: 0;
+}
+#bloc{
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    list-style: none;
+}
+
+.link_black{
+    text-decoration: none;
+    color: #000000;
+}
+
+/****** Header page ******/
+#header_page{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 25px;
+}
+
+#logo{
+    display: flex;
+}
+
+/*----- Nav -----*/
+#header_page nav{
+    display: flex;
+    align-items: center;
+}
+
+#liste_navigation_page{
+    display: flex;
+}
+
+#liste_navigation_page a {
+    margin: 0 10px 0 10px;
+}
+
+#liste_navigation_page a[href*="sinscrire"]{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #0065FC;
+}
+
+/****** Main ******/
+main{
+    padding-left: 25px;
+}
+/****** Recherches et filtres ******/
+.recherches_filtres{
+    display: flex;
+    flex-direction: column;
+}
+
+/*----- Recherches -----*/
+#barre_recherches{
+    display: flex;
+    height: 30px;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+
+input[name="recherches"]{
+    border: 1px solid #F2F2F2;
+    padding-left: 1%;
+}
+input[name="recherches"]::placeholder{
+    color: #000000;
+    font-weight: bold;
+}
+
+label[for="recherches"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    border-radius: 0 10px 10px 0;
+    background: #0065FC;
+    color: #FFFFFF;
+}
+
+/*----- Filtres -----*/
+#filtres{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+#filtres > p{
+    margin-right: 15px;
+}
+
+#filtres > div {
+    display: flex;
+}
+
+#filtres > div div{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#filtres > div div i{
+    color: #0065FC;
+    background: #DEEBFF;
+}
+
+#filtres > div div button{
+    width: 150px;
+    border-style: none;
+    border: 1px #F2F2F2 solid;
+    border-radius: 0 25px 25px 0;
+}
+
+.info_complementaire{
+    display: flex;
+}
+
+/****** Section hebergement ******/
+#hebergements{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hebergement_ville, .hebergement_ville_popularite{
+    background: #F2F2F2;
+    border-radius: 15px;
+}
+
+/****** aside popularites par ville ******/
+.plus_populaires{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/****** Footer page ******/
+#footer_page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+    background: #F2F2F2;
+}
