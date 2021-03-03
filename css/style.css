@@ -149,13 +149,24 @@ label[for="recherches"]{
 /****** Section hebergement ******/
 #hebergements{
     display: flex;
-    justify-content: space-around;
     margin-top: 20px;
 }
 
 .hebergement_ville, .hebergement_ville_popularite{
     background: #F2F2F2;
     border-radius: 15px;
+}
+
+
+/* J ai modifie ici le code avec sectionHebergement */
+/* another test*/
+.hebergement_ville{
+    width: 60%;
+    margin-right: 5%;
+}
+
+.hebergement_ville_popularite{
+    width: 30%;
 }
 
 /****** aside popularites par ville ******/
