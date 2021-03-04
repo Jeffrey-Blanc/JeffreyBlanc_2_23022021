@@ -166,7 +166,6 @@ label[for="recherches"]{
 .hebergement_ville > div {
     display: flex;
     flex-wrap: wrap;
-    height: 500px;
 }
 
 .hebergement_ville > div > div{
@@ -213,6 +212,65 @@ label[for="recherches"]{
     width: 155px;
     height: 180px;
 }
+
+/****** Activites ******/
+#activites > div {
+    display: flex;
+}
+
+#activites > div > div {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+#activites > div > div:last-child {
+    justify-content: space-around;
+}
+
+.une_image{
+   /* display: flex;
+    flex-direction: column;*/
+    width: 50%;
+}
+/*
+.une_image > div {
+    height: 100%;
+}
+*/
+.une_image img {
+    width: 75%;
+    height: 635px;
+}
+/*
+.une_image h3 {
+    height: 60px;
+    line-height: 60px;
+}
+*/
+.deux_images{
+    width: 50%;
+}
+
+.deux_images img {
+    width: 75%;
+}
+
+.deux_images h3 {
+    height: 60px;
+    line-height: 60px;
+}
+
+
+/* PROVISOIRE 
+#activites img {
+    width: 250px;
+    height: 300px;
+}
+*/
+
+
+
 
 /****** Footer page ******/
 #footer_page{
