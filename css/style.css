@@ -157,23 +157,61 @@ label[for="recherches"]{
     border-radius: 15px;
 }
 
-
-/* J ai modifie ici le code avec sectionHebergement */
-/* another test 2*/
 .hebergement_ville{
     width: 60%;
     margin-right: 5%;
+    padding: 25px;
 }
 
-.hebergement_ville_popularite{
-    width: 30%;
+.hebergement_ville > div {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+.hebergement_ville > div > div{
+    border-radius: 10px;
+    background: #FFFFFF;
+    margin-right: 20px;
+}
+
+.hebergement_ville > div > div div{
+    padding: 2px;
+} 
+
+.hebergement_ville img {
+    width: 300px;
+    height: 170px;
 }
 
 /****** aside popularites par ville ******/
+.hebergement_ville_popularite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
 .plus_populaires{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+}
+
+.hebergement_ville_popularite > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergement_ville_popularite > div > div {
+    display: flex;
+}
+
+
+.hebergement_ville_popularite img {
+    width: 155px;
+    height: 180px;
 }
 
 /****** Footer page ******/
