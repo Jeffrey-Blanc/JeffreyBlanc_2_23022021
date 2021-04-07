@@ -152,67 +152,78 @@ label[for="recherches"]{
     margin-top: 20px;
 }
 
-.hebergement_ville, .hebergement_ville_popularite{
+#hebergement_ville, #hebergement_ville_popularite{
     background: #F2F2F2;
     border-radius: 15px;
 }
 
-.hebergement_ville{
-    width: 60%;
+#hebergement_ville{
+    width: 880px;
     margin-right: 5%;
-    padding: 25px;
+    padding: 45px 0 0 40px;
 }
 
-.hebergement_ville > div {
+#hebergement_ville > div {
     display: flex;
     flex-wrap: wrap;
 }
 
-.hebergement_ville > div > a{
-    border-radius: 10px;
+#hebergements a{
     background: #FFFFFF;
     margin-right: 30px;
     margin-bottom: 30px;
     padding: 5px;
+    border-radius: 15px;
 }
 
-.hebergement_ville > div > div div{
-    padding: 2px;
-} 
-
-.hebergement_ville img {
-    width: 300px;
-    height: 170px;
+#hebergement_ville img {
+    width: 236px;
+    height: 114px;
+    border-radius: 15px;
 }
 
 /****** aside popularites par ville ******/
-.hebergement_ville_popularite{
+#hebergement_ville_popularite{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 420px;
+    padding-top: 45px;
 }
 
 .plus_populaires{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 345px;
 }
 
-.hebergement_ville_popularite > div {
+#hebergement_ville_popularite a {
+    margin: 0px;
+    width: 340px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+#hebergement_ville_popularite figure {
+    display: flex;
+}
+
+/* #hebergement_ville_popularite > div > div {
+    display: flex;
+} */
+
+#hebergement_ville_popularite img {
+    width: 127px;
+    height: 135px;
+    border-radius: 15px 0 0 15px;
+    margin-right: 20px;
+}
+
+#hebergement_ville_popularite figcaption {
+    width: 139px;
     display: flex;
     flex-direction: column;
-}
-
-.hebergement_ville_popularite > div > div {
-    display: flex;
-}
-
-
-.hebergement_ville_popularite img {
-    width: 155px;
-    height: 180px;
 }
 
 /****** Activites ******/
