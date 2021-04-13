@@ -227,51 +227,71 @@ label[for="recherches"]{
 }
 
 /****** Activites ******/
+#activites {
+    margin-top: 60px;
+}
+
 #activites > div {
     display: flex;
+    margin-top: 20px;
 }
 
 #activites > div > div {
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
-#activites > div > div:last-child {
+/* #activites > div > div:last-child {
     justify-content: space-around;
+} */
+
+#activites img {
+    border-radius: 15px 15px 0 0;
 }
 
-.une_image{
-   /* display: flex;
-    flex-direction: column;*/
-    width: 50%;
+.une_image, .deux_images {
+    width: 300px;
+    margin-right: 44px;
 }
 /*
 .une_image > div {
     height: 100%;
 }
 */
-.une_image img {
-    width: 75%;
-    height: 635px;
-}
-/*
-.une_image h3 {
-    height: 60px;
-    line-height: 60px;
-}
-*/
-.deux_images{
-    width: 50%;
+.une_image a, .deux_images a {
+    display: block
 }
 
-.deux_images img {
-    width: 75%;
+.une_image img, .deux_images img {
+    width: 300px;
+}
+
+.une_image img {
+    height: 390px;
+}
+
+.deux_images a:last-child {
+    margin-top: 45px;
+}
+
+.grand_cards img {
+    /* width: 300px; */
+    height: 180px;
+}
+
+.petit_cards img {
+    height: 110px;
+}
+
+.une_image h3 {
+    height: 50px;
+    line-height: 50px;
 }
 
 .deux_images h3 {
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
 }
 
 
