@@ -294,17 +294,6 @@ label[for="recherches"]{
     line-height: 50px;
 }
 
-
-/* PROVISOIRE 
-#activites img {
-    width: 250px;
-    height: 300px;
-}
-*/
-
-
-
-
 /****** Footer page ******/
 #footer_page{
     display: flex;
@@ -312,4 +301,13 @@ label[for="recherches"]{
     width: 100%;
     height: 125px;
     background: #F2F2F2;
+}
+
+#footer_page div:first-child {
+    margin-left: 40px;
+    margin-right: 15%;
+}
+
+#footer_page div:last-child {
+    margin-left: 25%;
 }
