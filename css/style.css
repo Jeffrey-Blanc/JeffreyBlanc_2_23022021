@@ -51,14 +51,29 @@ li{
     display: flex;
 }
 
+ul#liste_navigation_page {
+    height: 100px;
+    line-height: 100px;
+}
+
 #liste_navigation_page a {
     margin: 0 10px 0 10px;
+    border-top: 2px solid #FFF;
+    width: 130px;
+}
+
+#liste_navigation_page a:hover {
+    border-top: 2px solid #0065FC;
 }
 
 #liste_navigation_page a[href*="sinscrire"]{
     margin-right: 20px;
     text-decoration: none;
     color: #0065FC;
+}
+
+#liste_navigation_page li {
+    text-align: center;
 }
 
 /****** Main ******/
