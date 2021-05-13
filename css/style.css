@@ -112,6 +112,7 @@ input[name="recherches"]{
     border: 1px solid #F2F2F2;
     padding-left: 1%;
     width: 235px;
+    font-weight: bold;
 }
 input[name="recherches"]::placeholder{
     color: #000000;
@@ -132,6 +133,7 @@ label[for="recherches"]{
 #filtres{
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 #filtres ul {
@@ -144,8 +146,14 @@ label[for="recherches"]{
     align-items: center;
     border: 2px solid #F2F2F2;
     border-radius: 25px;
+    border-left: none;
     margin-left: 15px;
     padding-right: 20px;
+}
+
+#filtres li:hover {
+    color: white;
+    background: #0065FC;
 }
 
 #filtres .fas {
