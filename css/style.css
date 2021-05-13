@@ -40,6 +40,7 @@ li{
 
 #logo{
     display: flex;
+    align-items: center;
 }
 
 /*----- Nav -----*/
@@ -57,13 +58,14 @@ ul#liste_navigation_page {
     line-height: 100px;
 }
 
-#liste_navigation_page a {
-    margin: 0 10px 0 10px;
+#liste_navigation_page li {
+    /* margin: 0 10px 0 10px; */
     border-top: 2px solid #FFF;
     width: 130px;
+    padding: 0 15px 0 15px;
 }
 
-#liste_navigation_page a:hover {
+#liste_navigation_page li:hover {
     border-top: 2px solid #0065FC;
 }
 
