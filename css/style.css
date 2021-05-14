@@ -16,11 +16,6 @@ h1{
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-#bloc{
-    display: flex;
-    flex-direction: column;
-}
-
 li{
     list-style: none;
 }
