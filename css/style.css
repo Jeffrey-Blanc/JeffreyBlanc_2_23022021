@@ -25,7 +25,7 @@ li{
     color: #000000;
 }
 
-/****** Header page ******/
+/****** Header page ******/  
 #header_page{
     display: flex;
     justify-content: space-between;
