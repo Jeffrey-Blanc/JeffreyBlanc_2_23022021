@@ -396,3 +396,32 @@ label[for="recherches"]{
 #footer_page li {
     margin-top: 5px;
 }
+
+/* Responsives */
+@media all and (min-width: 325px) and (max-width: 425px){
+    #header_page {
+        flex-wrap: wrap;
+    }
+
+    #list_navigation_page {
+        flex-wrap: wrap;
+    }
+
+    #filtres, #filtres ul {
+        flex-wrap: wrap;
+    }
+    
+    #hebergements {
+        flex-wrap: wrap-reverse;
+    }
+    
+    #activites > div {
+        flex-direction: column;
+    }
+
+    #footer_page {
+        flex-direction: column;
+        align-items: flex-start;
+        height: inherit;
+    }
+}
