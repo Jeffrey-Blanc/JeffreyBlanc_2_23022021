@@ -25,6 +25,10 @@ li{
     color: #000000;
 }
 
+img {
+    object-fit: cover;
+}
+
 /****** Header page ******/  
 #header_page{
     display: flex;
@@ -88,6 +92,7 @@ main{
 .recherches_filtres {
     display: flex;
     flex-direction: column;
+    margin: 20px 0;
 }
 
 .recherches_filtres > * {
@@ -120,7 +125,7 @@ input[name="recherches"]::placeholder{
     font-weight: bold;
 }
 
-label[for="recherches"]{
+#barre_recherches button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,6 +133,7 @@ label[for="recherches"]{
     border-radius: 0 10px 10px 0;
     background: #0065FC;
     color: #FFFFFF;
+    border: none;
 }
 
 /*----- Filtres -----*/
@@ -214,7 +220,11 @@ label[for="recherches"]{
     width: 60%;
     max-width: 60%;
     margin-right: 5%;
-    padding: 40px;
+    /* padding: 40px; */
+}
+
+#hebergement_ville > * {
+    margin: 20px 20px;
 }
 
 #hebergement_ville > div {
@@ -267,6 +277,13 @@ label[for="recherches"]{
     margin-right: 2px;
 }
 
+#hebergement_ville > button {
+    border: inherit;
+    background: inherit;
+    font-weight: bold;
+    text-align: inherit;
+}
+
 /****** aside popularites par ville ******/
 #hebergement_ville_popularite{
     display: flex;
@@ -316,6 +333,10 @@ label[for="recherches"]{
     margin-bottom: 60px;
 }
 
+#activites > h2 {
+    margin: 20px 20px;
+}
+
 #activites > div {
     display: flex;
     margin-top: 20px;
@@ -362,31 +383,31 @@ label[for="recherches"]{
     height: 110px;
 }
 
-.une_image h3 {
+.une_image h3, .deux_images h3 {
     height: 50px;
     line-height: 50px;
-}
-
-.deux_images h3 {
-    height: 50px;
-    line-height: 50px;
+    margin: 0 20px;
 }
 
 /****** Footer page ******/
 #footer_page{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
-    height: 125px;
     background: #F2F2F2;
-    padding: 40px;
+    /* padding: 40px; */
 }
 
 #footer_page div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 33%;
+    width: 33%;
+    margin: 20px 0;
+}
+
+#footer_page div > * {
+    margin: 0 20px;
 }
 
 #footer_page h4 {
@@ -398,21 +419,54 @@ label[for="recherches"]{
 }
 
 /* Responsives */
-@media all and (min-width: 325px) and (max-width: 425px){
+@media all and (min-width: 320px) and (max-width: 425px){
     #header_page {
         flex-wrap: wrap;
+        /*Provisoire*/
+        display: none;
+    }
+
+    main{
+        padding: inherit;
     }
 
     #list_navigation_page {
         flex-wrap: wrap;
     }
 
+    .recherches_filtres{
+        margin: 20px 20px;
+    }
     #filtres, #filtres ul {
         flex-wrap: wrap;
     }
     
     #hebergements {
         flex-wrap: wrap-reverse;
+    }
+
+    #hebergement_ville_popularite {
+        width: 100%;
+        padding: 20px;
+        border-radius: inherit;
+    }
+
+    #hebergement_ville {
+        width: 100%;
+        margin: inherit;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        max-width: inherit;
+        background: inherit;
+    }
+
+    #hebergement_ville > div {
+        margin: inherit;
+    }
+
+    #hebergement_ville > div > div {
+        flex: 0 0 100%;
     }
     
     #activites > div {
@@ -422,6 +476,10 @@ label[for="recherches"]{
     #footer_page {
         flex-direction: column;
         align-items: flex-start;
-        height: inherit;
+        padding: inherit;
+    }
+
+    #footer_page div {
+        width: inherit;
     }
 }
