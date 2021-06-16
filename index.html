@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <!-- Header : Logo et navigation -->
-    <header id="header_page">
+    <!-- Header : Logo et navigation --> <!-- Desktop -->
+    <header id="header_page_desktop">
         <div id="logo">
             <a href="index.html"><img src="img/logo/Reservia.svg" alt="Logo Reservia" /></a>
         </div>
@@ -24,11 +24,27 @@
         </nav>
     </header>
 
+    <!-- Header : Logo et navigation --> <!-- Tablette et smartphone-->
+    <header id="header_page_mobile">
+        <nav>
+            <ul>
+                <li><a href="index.hmtl"><img src="img/logo/Reservia.svg" alt="Logo Reservia"/></a></li>
+                <li><a href="#sinscrire" id="sinscrire">S'inscrire</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="#hebergements" class="link_black">Hébergements</a></li>
+                <li><a href="#activites" class="link_black">Activités</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <!-- recherches / filtres -->
         <section class="recherches_filtres">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
+            <span>En plein centre ville ou en pleine nature</span>
             <form id="barre_recherches">
                 <div class="icon">
                     <i class="fas fa-map-marker-alt"></i>

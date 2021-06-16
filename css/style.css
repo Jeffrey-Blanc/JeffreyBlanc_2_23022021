@@ -29,8 +29,8 @@ img {
     object-fit: cover;
 }
 
-/****** Header page ******/  
-#header_page{
+/****** Header page DESKTOP ******/  
+#header_page_desktop{
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -43,7 +43,7 @@ img {
 }
 
 /*----- Nav -----*/
-#header_page nav{
+#header_page_desktop nav{
     display: flex;
     align-items: center;
 }
@@ -64,9 +64,17 @@ ul#liste_navigation_page {
     padding: 0 15px 0 15px;
 }
 
-#liste_navigation_page li:hover {
-    border-top: 2px solid #0065FC;
+#liste_navigation_page > li:first-child {
+    border-top: 2px solid #0065FC;    
 }
+
+a[href*="hebergements"]{ 
+    color: #0065FC;
+}
+
+/* #liste_navigation_page li:hover {
+    border-top: 2px solid #0065FC;
+} */
 
 #liste_navigation_page a {
     display: flex;
@@ -76,10 +84,16 @@ ul#liste_navigation_page {
 #liste_navigation_page a[href*="sinscrire"]{
     text-decoration: none;
     color: #0065FC;
+    font-weight: bold;
 }
 
 #liste_navigation_page li {
     text-align: center;
+}
+
+/* Header page MOBILE */
+#header_page_mobile{
+    display: none;
 }
 
 /****** Main ******/
@@ -96,7 +110,15 @@ main{
 }
 
 .recherches_filtres > * {
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+.recherches_filtres > h1 {
+    margin-top: 0px;
+}
+
+.recherches_filtres > span {
+    margin-top: 5px;
 }
 
 /*----- Recherches -----*/
@@ -213,7 +235,7 @@ input[name="recherches"]::placeholder{
 }
 
 .gray {
-    color: #F2F2F2;
+    color: #CECECE;
 }
 
 #hebergement_ville{
@@ -243,7 +265,7 @@ input[name="recherches"]::placeholder{
     margin: 5%;
     display: flex;
     border-radius: 15px;
-    box-shadow: 1px 1px 12px #555;
+    box-shadow: 1px 1px 12px #CECECE;
 }
 
 #hebergements figure {
@@ -350,7 +372,7 @@ input[name="recherches"]::placeholder{
     display: block;
     margin-left: 20px;
     margin-right: 20px;
-    box-shadow: 1px 1px 12px #555;
+    box-shadow: 1px 1px 12px #CECECE;
     border-radius: 15px;
 }
 
@@ -420,10 +442,19 @@ input[name="recherches"]::placeholder{
 
 /* Responsives */
 @media all and (min-width: 320px) and (max-width: 425px){
-    #header_page {
+    #header_page_desktop {
         flex-wrap: wrap;
-        /*Provisoire*/
         display: none;
+    }
+
+    #header_page_mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header_page_mobile ul {
+        display: flex;
+        justify-content: space-between;
     }
 
     main{
@@ -437,8 +468,13 @@ input[name="recherches"]::placeholder{
     .recherches_filtres{
         margin: 20px 20px;
     }
+
     #filtres, #filtres ul {
         flex-wrap: wrap;
+    }
+
+    #filtres li {
+        margin: 5px;
     }
     
     #hebergements {
@@ -470,6 +506,19 @@ input[name="recherches"]::placeholder{
     }
     
     #activites > div {
+        flex-direction: column;
+    }
+
+    #activites img {
+        height: 110px;
+    }
+
+    .une_image > a, .deux_images > a, .deux_images a:last-child {
+        margin: 15px 20px 15px 20px;
+    }
+
+    .deux_images {
+        display: flex;
         flex-direction: column;
     }
 
