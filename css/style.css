@@ -3,6 +3,9 @@
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Black.ttf');
     src: url('../fonts/Raleway-Regular.ttf');
+
+    font-family: 'RalewayBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
 }
 
 h1{
@@ -30,20 +33,22 @@ img {
 }
 
 /****** Header page DESKTOP ******/  
-#header_page_desktop{
+#header_page{
     display: flex;
     justify-content: space-between;
-    height: 100px;
-    padding-left: 25px;
+    /* height: 100px; */
+    /* padding: 0 25px; */
 }
 
 #logo{
     display: flex;
     align-items: center;
+    flex: 1;
+    padding: 0 25px;
 }
 
 /*----- Nav -----*/
-#header_page_desktop nav{
+#header_page nav{
     display: flex;
     align-items: center;
 }
@@ -54,7 +59,7 @@ img {
 
 ul#liste_navigation_page {
     height: 100px;
-    line-height: 100px;
+    /* line-height: 100px; */
 }
 
 #liste_navigation_page li {
@@ -68,32 +73,55 @@ ul#liste_navigation_page {
     border-top: 2px solid #0065FC;    
 }
 
-a[href*="hebergements"]{ 
-    color: #0065FC;
+#liste_navigation_page li:hover {
+    border-top: 2px solid #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 0 0 15px 15px;
 }
 
-/* #liste_navigation_page li:hover {
+#liste_navigation_page li:hover .test {
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.test{
+    transition: 180ms;
+    text-decoration: none;
+}
+
+#sinscrire {
+    border-top: 2px solid white;
+}
+
+#sinscrire:hover {
     border-top: 2px solid #0065FC;
-} */
+    background-color: #DEEBFF;
+    border-radius: 0 0 15px 15px;
+    font-size: 1.2em;
+    transition: 180ms;
+}
 
 #liste_navigation_page a {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-#liste_navigation_page a[href*="sinscrire"]{
+a[href*="sinscrire"]{
     text-decoration: none;
     color: #0065FC;
     font-weight: bold;
+    height: 100px;
+    /* line-height: 100px; */
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
 }
 
 #liste_navigation_page li {
-    text-align: center;
-}
-
-/* Header page MOBILE */
-#header_page_mobile{
-    display: none;
+    display: flex;
+    justify-content: center;
 }
 
 /****** Main ******/
@@ -110,21 +138,24 @@ main{
 }
 
 .recherches_filtres > * {
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 .recherches_filtres > h1 {
-    margin-top: 0px;
+    margin: 0px;
 }
 
 .recherches_filtres > span {
-    margin-top: 5px;
+    margin: 5px 0;
 }
 
 /*----- Recherches -----*/
 #barre_recherches{
     display: flex;
+    /* justify-content: space-between; */
     height: 50px;
+    /* border: 1px solid #F2F2F2;
+    border-radius: 15px 15px; */
 }
 
 .icon{
@@ -137,14 +168,16 @@ main{
 }
 
 input[name="recherches"]{
+    /* flex: 1; */
     border: 1px solid #F2F2F2;
     padding-left: 1%;
-    width: 235px;
+    /* width: 235px; */
     font-weight: bold;
 }
 input[name="recherches"]::placeholder{
     color: #000000;
     font-weight: bold;
+    margin: 20px 0;
 }
 
 #barre_recherches button{
@@ -158,15 +191,25 @@ input[name="recherches"]::placeholder{
     border: none;
 }
 
+.fa-search {
+    display: none!important;
+}
+
 /*----- Filtres -----*/
 #filtres{
     display: flex;
     align-items: center;
     font-weight: bold;
+    flex-wrap: wrap;
+}
+
+#filtres > * {
+    margin: 5px 0;
 }
 
 #filtres ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #filtres li {
@@ -176,7 +219,7 @@ input[name="recherches"]::placeholder{
     border: 2px solid #F2F2F2;
     border-radius: 25px;
     border-left: none;
-    margin-left: 15px;
+    margin: 5px 10px;
     padding-right: 20px;
 }
 
@@ -347,6 +390,12 @@ input[name="recherches"]::placeholder{
     width: 139px;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+#hebergement_ville_popularite figcaption > div {
+    position: absolute;
+    bottom: 5px;
 }
 
 /****** Activites ******/
@@ -442,19 +491,34 @@ input[name="recherches"]::placeholder{
 
 /* Responsives */
 @media (max-width: 425px){
-    #header_page_desktop {
+    #header_page {
         flex-wrap: wrap;
-        display: none;
     }
 
-    #header_page_mobile{
-        display: flex;
-        flex-direction: column;
+    #header_page nav {
+        width: 100%;
+        order: 2;
     }
 
-    #header_page_mobile ul {
-        display: flex;
-        justify-content: space-between;
+    #header_page ul {
+        width: 100%;
+    }
+
+    #liste_navigation_page > li:first-child {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    #liste_navigation_page > li {
+        width: 50%;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    #liste_navigation_page li:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        border-radius: inherit;
+        color: #0065FC;
     }
 
     main{
@@ -469,12 +533,25 @@ input[name="recherches"]::placeholder{
         margin: 20px 20px;
     }
 
-    #filtres, #filtres ul {
-        flex-wrap: wrap;
-    }
-
     #filtres li {
         margin: 5px;
+    }
+
+    input[name="recherches"] {
+        flex: 1;
+    }
+
+    #barre_recherches button {
+        width: 60px;
+        border-radius: 15px 15px;
+    }
+
+    .btn-recherche{
+        display: none;
+    }
+
+    .fa-search {
+        display: block!important;
     }
     
     #hebergements {

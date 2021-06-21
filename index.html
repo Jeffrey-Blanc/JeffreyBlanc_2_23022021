@@ -10,36 +10,21 @@
 </head>
 
 <body>
-    <!-- Header : Logo et navigation --> <!-- Desktop -->
-    <header id="header_page_desktop">
+    <!-- Header : Logo et navigation -->
+    <header id="header_page">
         <div id="logo">
             <a href="index.html"><img src="img/logo/Reservia.svg" alt="Logo Reservia" /></a>
         </div>
         <nav>
             <ul id="liste_navigation_page">
-                <li><a href="#hebergements" class="link_black">Hébergements</a></li>
-                <li><a href="#activites" class="link_black">Activités</a></li>
-                <li><a href="#sinscrire" id="sinscrire">S'inscrire</a></li>
+                <li><a class="test" href="#hebergements" class="link_black">Hébergements</a></li>
+                <li><a class="test" href="#activites" class="link_black">Activités</a></li>
+                <!-- <li><a class="test" href="#sinscrire" id="sinscrire">S'inscrire</a></li> -->
             </ul>
         </nav>
+        <a class="test" href="#sinscrire" id="sinscrire">S'inscrire</a>
     </header>
-
-    <!-- Header : Logo et navigation --> <!-- Tablette et smartphone-->
-    <header id="header_page_mobile">
-        <nav>
-            <ul>
-                <li><a href="index.hmtl"><img src="img/logo/Reservia.svg" alt="Logo Reservia"/></a></li>
-                <li><a href="#sinscrire" id="sinscrire">S'inscrire</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><a href="#hebergements" class="link_black">Hébergements</a></li>
-                <li><a href="#activites" class="link_black">Activités</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    
     <main>
         <!-- recherches / filtres -->
         <section class="recherches_filtres">
@@ -50,7 +35,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <input type="text" name="recherches" id="recherches" placeholder="Marseille, France" />
-                <button>Rechercher</button>
+                <button><span class="btn-recherche">Rechercher</span><i class="fas fa-search"></i></button>
             </form>
             <div id="filtres">
                 <p>Filtres</p>
