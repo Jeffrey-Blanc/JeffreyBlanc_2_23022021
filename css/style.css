@@ -265,7 +265,9 @@ input[name="recherches"]::placeholder{
 /****** Section hebergement ******/
 #hebergements{
     display: flex;
-    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    margin: 15px 0;
 }
 
 #hebergement_ville, #hebergement_ville_popularite{
@@ -282,9 +284,12 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergement_ville{
-    width: 60%;
-    max-width: 60%;
-    margin-right: 5%;
+    flex: 0 0 55%;
+    /* width: 60%; */
+    /* max-width: 60%; */
+    min-width: 830px;
+    /* margin-right: 5%; */
+    margin: 1em 3em 1em 0;
     /* padding: 40px; */
 }
 
@@ -351,23 +356,29 @@ input[name="recherches"]::placeholder{
 
 /****** aside popularites par ville ******/
 #hebergement_ville_popularite{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 40px;
+    align-items: center; */
+    flex: 0 0 20%;
+    /* padding: 40px; */
+    min-width: 410px;
+    margin: 15px 0;
+}
+
+#hebergement_ville_popularite > * {
+    margin: 20px;
 }
 
 #hebergement_ville_popularite > h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    /* width: 100%; */
 }
 
-#hebergement_ville_popularite > div {
+/* #hebergement_ville_popularite > div {
     width: 100%;
-}
+} */
 
 #hebergement_ville_popularite a {
     margin: 0px;
@@ -387,7 +398,7 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergement_ville_popularite figcaption {
-    width: 139px;
+    /* width: 139px; */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -419,10 +430,12 @@ input[name="recherches"]::placeholder{
 
 .une_image a, .deux_images a {
     display: block;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    margin: 20px;
     box-shadow: 1px 1px 12px #CECECE;
     border-radius: 15px;
+    min-width: 305px;
 }
 
 #activites div > div:first-child {
@@ -490,7 +503,22 @@ input[name="recherches"]::placeholder{
 }
 
 /* Responsives */
-@media (max-width: 425px){
+@media (min-width: 425px) and (max-width: 1420px){
+    #hebergement_ville, #hebergement_ville_popularite {
+        flex: 0 0 100%;
+        min-width: inherit;
+    }
+
+    #activites > div {
+        flex-wrap: wrap;
+    }
+
+    .une_image, .deux_images {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
     #header_page {
         flex-wrap: wrap;
     }
@@ -520,6 +548,46 @@ input[name="recherches"]::placeholder{
         border-radius: inherit;
         color: #0065FC;
     }
+
+    #hebergement_ville > div > div{
+        flex: 0 0 50%;
+    }
+
+    .une_image, .deux_images {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 425px){
+    /* #header_page {
+        flex-wrap: wrap;
+    }
+
+    #header_page nav {
+        width: 100%;
+        order: 2;
+    }
+
+    #header_page ul {
+        width: 100%;
+    } */
+
+    /* #liste_navigation_page > li:first-child {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    #liste_navigation_page > li {
+        width: 50%;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    #liste_navigation_page li:hover {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        border-radius: inherit;
+        color: #0065FC;
+    } */
 
     main{
         padding: inherit;
@@ -558,14 +626,17 @@ input[name="recherches"]::placeholder{
         flex-wrap: wrap-reverse;
     }
 
+    #hebergement_ville, #hebergement_ville_popularite {
+        flex: 0 0 100%;
+        min-width: inherit;
+    }
+
     #hebergement_ville_popularite {
-        width: 100%;
-        padding: 20px;
+        /* padding: 20px; */
         border-radius: inherit;
     }
 
     #hebergement_ville {
-        width: 100%;
         margin: inherit;
         display: flex;
         flex-direction: column;
