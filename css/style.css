@@ -301,6 +301,7 @@ input[name="recherches"]::placeholder{
 
 #hebergement_ville > div {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -312,10 +313,11 @@ input[name="recherches"]::placeholder{
 
 #hebergements a{
     background: #FFFFFF;
-    margin: 5%;
+    margin: 10px;
     display: flex;
     border-radius: 15px;
     box-shadow: 1px 1px 12px #CECECE;
+    min-width: 235px;
 }
 
 #hebergements figure {
@@ -548,7 +550,7 @@ input[name="recherches"]::placeholder{
     }
 }
 
-@media (max-width: 425px){
+@media (max-width: 595px){
     main{
         padding: inherit;
     }
