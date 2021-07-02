@@ -1,15 +1,20 @@
 /****** CSS GLOBAL ******/
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'Raleway-Black';
     src: url('../fonts/Raleway-Black.ttf');
-    src: url('../fonts/Raleway-Regular.ttf');
 
-    font-family: 'RalewayBold';
+    font-family: 'RalewayExtraBold';
     src: url('../fonts/Raleway-ExtraBold.ttf');
+
+    font-family: 'RalewaySemiBold';
+    src: url('../fonts/Raleway-SemiBold.ttf');
+}
+
+h1, h2, h3, h4 {
+    font-family: 'arial';
 }
 
 h1{
-    font-family: 'Raleway';
     font-size: 1.6em;
 }
 
@@ -36,8 +41,6 @@ img {
 #header_page{
     display: flex;
     justify-content: space-between;
-    /* height: 100px; */
-    /* padding: 0 25px; */
 }
 
 #logo{
@@ -59,11 +62,9 @@ img {
 
 ul#liste_navigation_page {
     height: 100px;
-    /* line-height: 100px; */
 }
 
 #liste_navigation_page li {
-    /* margin: 0 10px 0 10px; */
     border-top: 2px solid #FFF;
     width: 130px;
     padding: 0 15px 0 15px;
@@ -73,32 +74,23 @@ ul#liste_navigation_page {
     border-top: 2px solid #0065FC;    
 }
 
+#liste_navigation_page > li:first-child > a {
+    color: #0065FC;    
+}
+
+
 #liste_navigation_page li:hover {
     border-top: 2px solid #0065FC;
-    background-color: #DEEBFF;
-    border-radius: 0 0 15px 15px;
 }
 
-#liste_navigation_page li:hover .test {
+#liste_navigation_page li:hover .hover {
     font-size: 1.2em;
     text-decoration: none;
 }
 
-.test{
+.hover{
     transition: 180ms;
     text-decoration: none;
-}
-
-#sinscrire {
-    border-top: 2px solid white;
-}
-
-#sinscrire:hover {
-    border-top: 2px solid #0065FC;
-    background-color: #DEEBFF;
-    border-radius: 0 0 15px 15px;
-    font-size: 1.2em;
-    transition: 180ms;
 }
 
 #liste_navigation_page a {
@@ -106,18 +98,31 @@ ul#liste_navigation_page {
     justify-content: center;
     align-items: center;
     width: 100%;
+    font-family: 'RalewaySemiBold';
+    font-size: 1.1em;
 }
 
 a[href*="sinscrire"]{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid white;
+    width: 130px;
     text-decoration: none;
     color: #0065FC;
-    font-weight: bold;
     height: 100px;
-    /* line-height: 100px; */
     display: flex;
     align-items: center;
-    padding: 0 25px;
+    font-family: 'RalewaySemiBold';
+    font-weight: bold;
+    font-size: 1.1em;
 }
+
+a[href*="sinscrire"]:hover {
+    border-top: 2px solid #0065FC;
+    color: #DEEBFF;
+    transition: 260ms;
+}
+
 
 #liste_navigation_page li {
     display: flex;
@@ -152,10 +157,7 @@ main{
 /*----- Recherches -----*/
 #barre_recherches{
     display: flex;
-    /* justify-content: space-between; */
     height: 50px;
-    /* border: 1px solid #F2F2F2;
-    border-radius: 15px 15px; */
 }
 
 .icon{
@@ -168,15 +170,14 @@ main{
 }
 
 input[name="recherches"]{
-    /* flex: 1; */
     border: 1px solid #F2F2F2;
     padding-left: 1%;
-    /* width: 235px; */
     font-weight: bold;
 }
 input[name="recherches"]::placeholder{
     color: #000000;
-    font-weight: bold;
+    font-family: 'arial';
+    font-weight: 800;
     margin: 20px 0;
 }
 
@@ -189,6 +190,10 @@ input[name="recherches"]::placeholder{
     background: #0065FC;
     color: #FFFFFF;
     border: none;
+}
+
+.btn-recherche{
+    font-family: 'RalewaySemiBold';
 }
 
 .fa-search {
@@ -284,13 +289,9 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergement_ville{
-    flex: 0 0 55%;
-    /* width: 60%; */
-    /* max-width: 60%; */
+    flex: 0 0 65%;
     min-width: 830px;
-    /* margin-right: 5%; */
     margin: 1em 3em 1em 0;
-    /* padding: 40px; */
 }
 
 #hebergement_ville > * {
@@ -317,11 +318,13 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergements figure {
-    margin: 2%;
+    margin: 0.5em;
+    width: 100%;
 }
 
 #hebergement_ville figure {
-    margin: 3%;
+    margin: 0.5em;
+    width: 100%;
 }
 
 
@@ -348,6 +351,8 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergement_ville > button {
+    font-family: 'RalewayExtrabold';
+    font-size: 1.1em;
     border: inherit;
     background: inherit;
     font-weight: bold;
@@ -356,11 +361,7 @@ input[name="recherches"]::placeholder{
 
 /****** aside popularites par ville ******/
 #hebergement_ville_popularite{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    flex: 0 0 20%;
-    /* padding: 40px; */
+    flex: 0 0 30%;
     min-width: 410px;
     margin: 15px 0;
 }
@@ -373,12 +374,8 @@ input[name="recherches"]::placeholder{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100%; */
 }
 
-/* #hebergement_ville_popularite > div {
-    width: 100%;
-} */
 
 #hebergement_ville_popularite a {
     margin: 0px;
@@ -398,7 +395,6 @@ input[name="recherches"]::placeholder{
 }
 
 #hebergement_ville_popularite figcaption {
-    /* width: 139px; */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -430,20 +426,10 @@ input[name="recherches"]::placeholder{
 
 .une_image a, .deux_images a {
     display: block;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     margin: 20px;
     box-shadow: 1px 1px 12px #CECECE;
     border-radius: 15px;
     min-width: 305px;
-}
-
-#activites div > div:first-child {
-    margin-left: 0px;
-}
-
-#activites div > div:last-child {
-    margin-right: 0px;
 }
 
 #activites img {
@@ -479,7 +465,6 @@ input[name="recherches"]::placeholder{
     align-items: baseline;
     width: 100%;
     background: #F2F2F2;
-    /* padding: 40px; */
 }
 
 #footer_page div {
@@ -556,39 +541,13 @@ input[name="recherches"]::placeholder{
     .une_image, .deux_images {
         flex: 0 0 100%;
     }
+
+    #activites img {
+        height: 390px;
+    }
 }
 
 @media (max-width: 425px){
-    /* #header_page {
-        flex-wrap: wrap;
-    }
-
-    #header_page nav {
-        width: 100%;
-        order: 2;
-    }
-
-    #header_page ul {
-        width: 100%;
-    } */
-
-    /* #liste_navigation_page > li:first-child {
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-    }
-
-    #liste_navigation_page > li {
-        width: 50%;
-        border-bottom: 2px solid #F2F2F2;
-    }
-
-    #liste_navigation_page li:hover {
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-        border-radius: inherit;
-        color: #0065FC;
-    } */
-
     main{
         padding: inherit;
     }
@@ -632,7 +591,6 @@ input[name="recherches"]::placeholder{
     }
 
     #hebergement_ville_popularite {
-        /* padding: 20px; */
         border-radius: inherit;
     }
 
@@ -640,7 +598,6 @@ input[name="recherches"]::placeholder{
         margin: inherit;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         max-width: inherit;
         background: inherit;
     }
