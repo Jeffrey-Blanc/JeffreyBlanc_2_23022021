@@ -173,6 +173,7 @@ input[name="recherches"]{
     border: 1px solid #F2F2F2;
     padding-left: 1%;
     font-weight: bold;
+    width: 15em;
 }
 input[name="recherches"]::placeholder{
     color: #000000;
